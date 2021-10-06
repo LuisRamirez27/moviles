@@ -77,6 +77,16 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 Navigator.pushNamed(context, '/notas');
               },
             ),
+            ListTile(
+              title: Text('Movies'),
+              subtitle: Text('Prueba API REST'),
+              leading: Icon(Icons.movie),
+              trailing: Icon(Icons.chevron_right),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/movie');
+              },
+            ),
           ],
         ),
       ),
