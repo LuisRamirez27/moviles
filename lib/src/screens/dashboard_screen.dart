@@ -48,13 +48,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
               },
             ),
             ListTile(
-              title: Text('Opcion 1'),
-              subtitle: Text('Descripcion corta'),
+              title: Text('Propinas'),
+              subtitle: Text('Capturar y calcular el monto del consumo'),
               leading: Icon(Icons.monetization_on_outlined),
               trailing: Icon(Icons.chevron_right),
               onTap: () {
                 Navigator.pop(context);
-                Navigator.pushNamed(context, '/opc1');
+                Navigator.pushNamed(context, '/propinas');
               },
             ),
             ListTile(
@@ -109,7 +109,9 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                     MaterialPageRoute(
                         builder: (context) => editUserScreen(
                               user: user,
-                            )));
+                            ))).whenComplete(() {
+                  setState(() {});
+                });
               },
               icon: Icon(Icons.edit)),
         ],
